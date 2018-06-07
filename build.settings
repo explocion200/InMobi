@@ -1,0 +1,48 @@
+--
+-- For more information on build.settings see here:
+-- http://docs.coronalabs.com/guide/distribution/buildSettings/index.html
+--
+
+settings =
+{
+	orientation = {
+		default = "portrait",
+		supported = { "portrait", "portraitUpsideDown" }
+	},
+
+	iphone =
+	{
+		plist =
+		{
+			CFBundleIconFiles =
+			{
+				"Icon-40.png",
+				"Icon-58.png",
+				"Icon-76.png",
+				"Icon-80.png",
+				"Icon-87.png",
+				"Icon-120.png",
+				"Icon-152.png",
+				"Icon-167.png",
+				"Icon-180.png",
+			},
+			NSAppTransportSecurity = { NSAllowsArbitraryLoads=true },
+		},
+	},
+
+	window =
+	{
+		titleText =
+		{
+			default = "InMobi",
+		},
+	},
+
+	plugins =
+	{
+		["plugin.inMobi"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+	},
+}
