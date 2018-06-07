@@ -177,7 +177,7 @@ local function checkSetup()
 
 	if ( system.getInfo( "environment" ) ~= "device" ) then return end
 
-	if ( tostring(accountID) == "7ef0a9843e704e248bd0084059b8da28" ) then
+	if ( tostring(accountID) == "[YOUR-ACCOUNT-ID]" ) then
 		local alert = native.showAlert( "Important", 'Confirm that you have specified your InMobi account ID within "main.lua" on line 35. This ID can be found within the InMobi developer portal.', { "OK", "inmobi.com" },
 			function( event )
 				if ( event.action == "clicked" and event.index == 2 ) then
@@ -185,7 +185,7 @@ local function checkSetup()
 				end
 			end )
 
-	elseif ( system.getInfo("platformName") == "Android" and ( tostring(bannerPlacementID) == "1530410333274" or tostring(interstitialPlacementID) == "1530423336437" ) ) then
+	elseif ( system.getInfo("platformName") == "Android" and ( tostring(bannerPlacementID) == "[ANDROID-BANNER-PLACEMENT-ID]" or tostring(interstitialPlacementID) == "[ANDROID-INTERSTITIAL-PLACEMENT-ID]" ) ) then
 		local alert = native.showAlert( "Important", 'Confirm that you have specified two unique InMobi ad placement IDs within "main.lua" on lines 41-42. These can be generated within the InMobi developer portal.', { "OK", "inmobi.com" },
 			function( event )
 				if ( event.action == "clicked" and event.index == 2 ) then
@@ -204,7 +204,6 @@ local function checkSetup()
 		setupComplete = true
 	end
 end
-
 
 -- Button handler function
 local function onButtonRelease( event )
