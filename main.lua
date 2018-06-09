@@ -1,8 +1,3 @@
-
-
-
-
-
 -- Abstract: InMobi
 -- Version: 1.0
 -- Sample code is MIT licensed; see https://www.coronalabs.com/links/code/license
@@ -42,8 +37,8 @@ local accountID = "7ef0a9843e704e248bd0084059b8da28"
 local bannerPlacementID
 local interstitialPlacementID
 if ( system.getInfo("platformName") == "Android" ) then  -- Android
-	bannerPlacementID = "1530410333274 "
-	interstitialPlacementID = "1530423336437 "
+	bannerPlacementID = "1530410333274"
+	interstitialPlacementID = "1530423336437"
 elseif ( system.getInfo("platformName") == "iPhone OS" ) then  --iOS
 	bannerPlacementID = "[IOS-BANNER-PLACEMENT-ID]"
 	interstitialPlacementID = "[IOS-INTERSTITIAL-PLACEMENT-ID]"
@@ -51,7 +46,7 @@ end
 
 -- Table of data for menu buttons
 local menuButtons = {
-	loadBanner = { label="Load Test Ad", y=120 },
+	loadBanner = { label="Load Banner Ad", y=120 },
 	showBanner = { label="Show Banner Ad", y=170 },
 	hideBanner = { label="Hide Banner Ad", y=220 },
 	loadInterstitial = { label="Load Interstitial Ad", y=285 },
@@ -204,6 +199,7 @@ local function checkSetup()
 		setupComplete = true
 	end
 end
+
 
 -- Button handler function
 local function onButtonRelease( event )
